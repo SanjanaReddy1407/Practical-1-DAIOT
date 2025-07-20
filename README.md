@@ -3,20 +3,20 @@ Introduction to Arduino and Raspberry Pi
 
 # Aim-- To Study the Arduino and Raspberry Pi.
 # Theory
-Arduino
+1.Arduino
 Arduino is an open-source electronics platform that provides a simple microcontroller-based
 environment for creating interactive electronic projects. It uses a straightforward programming
 language and IDE to control digital and analog components.
-Raspberry Pi
+2.Raspberry Pi
 Raspberry Pi is a compact, versatile computer that runs a full operating system and can interface
 with external hardware through its GPIO pins. It supports various programming languages,
 including Python, which is often used for controlling hardware.
-Serial Communication
+3.Serial Communication
 Serial communication is a method for transmitting data between devices. Arduino and Raspberry
 Pi can communicate via serial ports, allowing data to be sent and received. This is useful for
 integrating sensor data or control signals between the two platforms.
 
-3. Materials Required
+# Materials Required
 - Arduino Uno board
 - Raspberry Pi (any model)
 - USB cable for Arduino
@@ -29,7 +29,7 @@ integrating sensor data or control signals between the two platforms.
 - Monitor, keyboard, and mouse (for Raspberry Pi)
 
 
-4. Procedure
+# Procedure
 
 Part 1: Arduino Setup
 1. Connect the LED:
@@ -49,15 +49,8 @@ o Power up the Raspberry Pi and complete the initial setup.
 2. Install Python Serial Library
 o Open a terminal window on the Raspberry Pi.
 o Install the pyserial library with
-3. Create Python Script
-o Create a Python script to read the serial data from Arduino. Open a text editor and
-write the following script
-4. Run the Script:
-o Save the Python script as read_serial.py.
-o Execute the script by running:
-5. Connect Arduino to Raspberry Pi:
-o Connect the Arduino to the Raspberry Pi using a USB cable.
-6. Working
+
+# Working
 Arduino Operation:
 The Arduino code continuously toggles the LED on and off every second while sending serial
 messages (&quot;LED ON&quot; and &quot;LED OFF&quot;) to the connected serial port.
@@ -66,8 +59,7 @@ The Python script running on the Raspberry Pi reads the serial messages sent by 
 prints them to the terminal. This allows the Raspberry Pi to monitor the status of the LED on the
 Arduino.
 
-Characteristics of 
-Arduino and Raspberry Pi
+# Characteristics of Arduino and Raspberry Pi
 
 1.
 ARDUINO-In the year 2005, the classrooms of
@@ -148,7 +140,7 @@ Arduino.
 Operating System is required in Raspberry
 Pi.
 
-7. Conclusion
+# Conclusion
 The lab exercise successfully demonstrated the basic operations of Arduino and Raspberry Pi, as
 well as how to establish serial communication between them. By completing this experiment,
 students gained practical experience in interfacing microcontrollers with single-board computers
