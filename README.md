@@ -1,9 +1,8 @@
 # Practical-1-DAIOT
 Introduction to Arduino and Raspberry Pi
 
-1. Aim-- To Study the Arduino and Raspberry Pi.
-
-2. Theory
+# Aim-- To Study the Arduino and Raspberry Pi.
+# Theory
 Arduino
 Arduino is an open-source electronics platform that provides a simple microcontroller-based
 environment for creating interactive electronic projects. It uses a straightforward programming
@@ -16,6 +15,7 @@ Serial Communication
 Serial communication is a method for transmitting data between devices. Arduino and Raspberry
 Pi can communicate via serial ports, allowing data to be sent and received. This is useful for
 integrating sensor data or control signals between the two platforms.
+
 3. Materials Required
 - Arduino Uno board
 - Raspberry Pi (any model)
@@ -27,7 +27,10 @@ integrating sensor data or control signals between the two platforms.
 - DHT11 Temperature and Humidity Sensor
 - MicroSD card with Raspbian OS (for Raspberry Pi)
 - Monitor, keyboard, and mouse (for Raspberry Pi)
+
+
 4. Procedure
+
 Part 1: Arduino Setup
 1. Connect the LED:
 o Place the LED on the breadboard.
@@ -36,55 +39,22 @@ o Connect the anode (long leg) of the LED to digital pin 9 on the Arduino throug
 o Connect the cathode (short leg) to the ground (GND) on the Arduino.
 2. Upload the Arduino Sketch:
 o Open the Arduino IDE on your computer.
-o Write and upload the following code to the Arduino:
-cpp
-Copy code
-void setup() {
-Serial.begin(9600); // Initialize serial communication
-pinMode(9, OUTPUT); // Set pin 9 as output
-}
-void loop() {
-digitalWrite(9, HIGH); // Turn the LED on
-Serial.println(&quot;LED ON&quot;);
-delay(1000); // Wait for a second
-digitalWrite(9, LOW); // Turn the LED off
-Serial.println(&quot;LED OFF&quot;);
-delay(1000); // Wait for a second
-}
+o Write and upload the following code to the Arduino
+
 Part 2: Raspberry Pi Setup
-1. Prepare Raspberry Pi:
+1. Prepare Raspberry Pi
 o Insert the microSD card into the Raspberry Pi.
 o Connect the monitor, keyboard, and mouse.
 o Power up the Raspberry Pi and complete the initial setup.
-2. Install Python Serial Library:
+2. Install Python Serial Library
 o Open a terminal window on the Raspberry Pi.
-o Install the pyserial library with:
-bash
-Copy code
-sudo apt-get update
-sudo apt-get install python3-serial
-
-3. Create Python Script:
+o Install the pyserial library with
+3. Create Python Script
 o Create a Python script to read the serial data from Arduino. Open a text editor and
-write the following script:
-python
-Copy code
-import serial
-# Open serial port
-ser = serial.Serial(&#39;/dev/ttyACM0&#39;, 9600)
-while True:
-try:
-line = ser.readline().decode(&#39;utf-8&#39;).strip()
-print(line)
-except KeyboardInterrupt:
-break
-ser.close()
+write the following script
 4. Run the Script:
 o Save the Python script as read_serial.py.
 o Execute the script by running:
-bash
-Copy code
-python3 read_serial.py
 5. Connect Arduino to Raspberry Pi:
 o Connect the Arduino to the Raspberry Pi using a USB cable.
 6. Working
